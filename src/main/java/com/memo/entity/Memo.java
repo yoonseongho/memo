@@ -13,7 +13,14 @@ public class Memo {
     private String username;
     private String contents;
 
+    /* 메모 생성 */
     public Memo(MemoRequestDto requestDto) {
+        this.username = requestDto.getUsername();
+        this.contents = requestDto.getContents();
+    }
+
+    /* 메모 수정 */
+    public void update(MemoRequestDto requestDto) {
         this.username = requestDto.getUsername();
         this.contents = requestDto.getContents();
     }
